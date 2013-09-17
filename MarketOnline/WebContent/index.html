@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html  ng-app>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script src="js/StockRealTime.js"></script>
+</head>
+<body>
+	<h2>Todo</h2>
+	<div ng-controller="StockCtrl" ng-init="init()">
+		<span>total: {{stockList.length}}</span>
+		<ul class="unstyled">
+			<li ng-repeat="stock in stockList"><span>{{stock}}, {{stock.open}}</span></li>
+		</ul>
+
+	</div>
+</body>
+</html>
